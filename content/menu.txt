@@ -1,4 +1,6 @@
 /
 blog
 about
+  about/scherma-medievale
+  about/suonare
 contatti

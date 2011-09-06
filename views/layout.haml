@@ -13,10 +13,8 @@
           %h2= @subtitle
           - display_menu(@menu_items, :class => "top_nav", :levels => 1)
       #main.row
-        .column.grid_8
+        .column.grid_12
           = yield
-        .column.grid_4
-          = haml :sidebar
       #footer.row
         .column.grid_12
           %p= "Copyright Giustino Borzacchiello"
