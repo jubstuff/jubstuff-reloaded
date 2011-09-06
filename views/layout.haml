@@ -1,0 +1,16 @@
+!!!
+%html{ :lang => "it" }
+  %head
+    %meta{ :charset => "UTF-8" }
+    %title= @title
+    %link{ :rel => "stylesheet", :href => "/css/reset.css" }
+    %link{ :rel => "stylesheet", :href => "/css/screen.css" }
+  %body
+    #wrapper.row
+      #header.column.grid_12
+        %h1 Jub's Stuff [Reloaded]
+        %h2 Pensieri pensioggi...
+        - display_menu(@menu_items, :class => "top_nav", :levels => 1)
+      = yield
+      %p= "Copyright Giustino Borzacchiello"
+    

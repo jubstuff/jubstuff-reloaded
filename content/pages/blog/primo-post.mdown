@@ -1,0 +1,27 @@
+Date: 06 Settembre 2011
+Summary: Questo è il primo post che sto pubblicando su Nesta e non parlerà di calciatori
+
+# Primo post!
+
+Questo è il mio primo post. Potrei scriverci un sacco di cose interessanti,
+ma mi limiterò a scrivere nonsense
+
+.7 has been released and is available from rubygems.org. 
+
+It contains two new features and a handful of bug fixes. The features
+are best described as "small, but useful":
+
+1. There's a new renderer method called `stylesheet` that can convert a
+   Sass or SCSS format stylesheet into a CSS file. Previously you had to
+   choose which format your site or theme would use and stick with it,
+   or override Nesta's behaviour if you didn't like the default format
+   (Sass). The `stylesheet` method was contributed by Isaac Cambron.
+
+2. Menus are rendered as ordered lists. If you wanted to write CSS to
+   highlight the menu item corresponding to the current page, you
+   couldn't do it. In 0.9.7 you can; the current page's list item has
+   the class of “current”.
+
+You may have noticed that we've skipped version 0.9.6. This release
+should have been numbered 0.9.6, but there was a bug in the version of
+Rubygems that I used to build and deploy it and I had to remove the gem
