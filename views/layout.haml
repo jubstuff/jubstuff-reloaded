@@ -6,11 +6,18 @@
     %link{ :rel => "stylesheet", :href => "/css/reset.css" }
     %link{ :rel => "stylesheet", :href => "/css/screen.css" }
   %body
-    #wrapper.row
-      #header.column.grid_12
-        %h1 Jub's Stuff [Reloaded]
-        %h2 Pensieri pensioggi...
-        - display_menu(@menu_items, :class => "top_nav", :levels => 1)
-      = yield
-      %p= "Copyright Giustino Borzacchiello"
+    #wrapper
+      #header.row
+        .column.grid_12
+          %h1= @heading
+          %h2= @subtitle
+          - display_menu(@menu_items, :class => "top_nav", :levels => 1)
+      #main.row
+        .column.grid_8
+          = yield
+        .column.grid_4
+          = haml :sidebar
+      #footer.row
+        .column.grid_12
+          %p= "Copyright Giustino Borzacchiello"
     
