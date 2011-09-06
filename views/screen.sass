@@ -48,7 +48,6 @@ body
   background: $bg
   color: #222 
   font-family: Georgia, serif
-  font-size: 80%
  
 /* Headings */
 
@@ -233,7 +232,7 @@ caption
 #wrapper
   margin-top: 3em
 
-/* top nav */
+/* =top nav */
 .top_nav
   padding: 0 0 20px 10px
   border-bottom: 1px solid #333
@@ -245,13 +244,13 @@ caption
   a
     float: left
     line-height: 14px
-    font-weight: bold
     margin: 0 10px 4px 10px
     text-decoration: none
   
-  a.active, a:hover
-    border-bottom: 4px solid #ccc
-    padding-bottom: 2px
+  li.current
+    a, a:hover
+      border-bottom: 5px solid #333
+      padding-bottom: 4px
   
   a:hover
     color: #CCC
@@ -264,6 +263,9 @@ caption
   li.github
     background: url(/img/icon/github-icon.png) no-repeat 0 50%
 /* =intro */
+#home
+  h1
+    display: none
 p.intro
   font-size: 32px
   line-height: 48px
