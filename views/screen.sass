@@ -267,24 +267,39 @@ caption
   h1
     display: none
 p.intro
+  color: #999
   font-size: 32px
   line-height: 48px
+
+  a:link, a:visited
+    color: #999
+    text-decoration: none
+    -webkit-transition: color .3s ease
+    -moz-transition: color .3s ease
+    -o-transition: color .3s ease
+    transition: color .3s ease
+
+  &:hover a
+    color: #369
+
+  a:hover
+    color: #09f
   span.github
     background: url(/img/icon/github_32.png) no-repeat 0 50%
     padding-left: 40px
+
   span.delicious
     background: url(/img/icon/delicious_32.png) no-repeat 0 50%
     padding-left: 40px
+
   span.meemi
     background: url(/img/icon/meemi_32.png) no-repeat 0 50%
     padding-left: 40px
-  span.rosaespada
-    a:link, a:visited
-      color: #800
+
   span.musica
     background: url(/img/icon/piano_32.png) no-repeat 0 50%
     padding-left: 40px
+
   span.tea
     background: url(/img/icon/teacup_32.gif) no-repeat 0 50%
     padding-left: 40px
-
