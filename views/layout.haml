@@ -7,14 +7,12 @@
     %link{ :rel => "stylesheet", :href => "/css/screen.css" }
   %body{ :class => @body_class }
     #wrapper
-      #header.row
-        .column.grid_12
-          %h1= @heading
-          %h2= @subtitle
-          - display_menu(@menu_items, :class => "top_nav", :levels => 1)
-      #main.row
+      #header
+        %h1= @heading
+        %h2= @subtitle
+        - display_menu(@menu_items, :class => "top_nav", :levels => 1)
+      #main
         = yield
-      #footer.row
-        .column.grid_12
-          %p= "Copyright Giustino Borzacchiello"
+      #footer
+        %p= "Copyright Giustino Borzacchiello"
     

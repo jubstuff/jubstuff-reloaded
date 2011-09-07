@@ -1,44 +1,13 @@
+/* target / content = result */
 $bg: #fffffa
 $font-stack: Georgia, serif
 
-.grid_1  
-  width: 60px
-.grid_2 
-  width: 140px
-.grid_3 
-  width: 220px
-.grid_4  
-  width: 300px
-.grid_5  
-  width: 380px
-.grid_6  
-  width: 460px
-.grid_7  
-  width: 540px
-.grid_8  
-  width: 620px
-.grid_9  
-  width: 700px
-.grid_10  
-  width: 780px
-.grid_11  
-  width: 860px
-.grid_12  
-  width: 940px
-
-.column 
-  margin: 0 10px
-  overflow: hidden
-  float: left
-  display: inline
-.row 
-  width: 960px
-  margin: 0 auto
-  overflow: hidden
-.row .row 
-  margin: 0 -10px
-  width: auto
-  display: inline-block
+#wrapper
+  margin: 3em auto
+  width: 90%
+#main
+  margin: 0 auto 50px
+  width: 93.75% 
 
 /* Default font settings.
    The font-size percentage is of 16px. (0.75 * 16px = 12px) */
@@ -107,8 +76,8 @@ a:focus,
 a:hover       
   color: #09f   
 a             
-  color: #06c  
-  text-decoration: underline   
+  color: #369  
+  text-decoration: none
 
 blockquote    
   margin: 1.5em  
@@ -229,10 +198,9 @@ caption
   margin-bottom: 0  
   padding-bottom: 0   
 
-#wrapper
-  margin-top: 3em
-
-/* =top nav */
+.page-title h1
+  display: none
+/* ==top nav */
 .top_nav
   padding: 0 0 20px 10px
   border-bottom: 1px solid #333
@@ -251,25 +219,30 @@ caption
     a, a:hover
       border-bottom: 5px solid #333
       padding-bottom: 4px
-  
-  a:hover
-    color: #CCC
 
-/* =social */
+/* ==social */
 .social ul 
   list-style: none
-  li
+
+  li a
+    display: block
+    line-height: 2em
     padding-left: 32px
-  li.github
-    background: url(/img/icon/github-icon.png) no-repeat 0 50%
+
+  li.github a 
+    background: url(/img/icon/github_24.png) no-repeat 0 50%
+  li.delicious a 
+    background: url(/img/icon/delicious_24.png) no-repeat 0 50%
+  li.meemi a 
+    background: url(/img/icon/meemi_24.png) no-repeat 0 50%
+  li.twitter a 
+    background: url(/img/icon/twitter_24.png) no-repeat 0 50%
+
 /* =intro */
-#home
-  h1
-    display: none
 p.intro
   color: #999
-  font-size: 32px
-  line-height: 48px
+  font-size: 2em
+  line-height: 1.5em 
 
   a:link, a:visited
     color: #999
@@ -303,3 +276,31 @@ p.intro
   span.tea
     background: url(/img/icon/teacup_32.gif) no-repeat 0 50%
     padding-left: 40px
+
+/* ==blog */
+#blog
+  float: left
+  width: 66.6666666667%
+
+  ol
+    list-style-type: none
+  li.post
+    border-bottom: 1px solid #EEE
+    margin: 0 0 1.5em 0
+    padding: 0 0 1.5em 0
+
+    h2
+      font-size: 1.0625em
+
+    .post-meta
+      color: #9E9E9E
+      font-style: italic
+      font-size: 80%
+
+#sidebar
+  float: right
+  width: 33.3333333333%
+
+/* ==footer */
+#footer
+  clear: both
