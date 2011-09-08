@@ -1,5 +1,5 @@
-#blog
-  .page-title
-    %h1 Blog
-  .articles= ultimi_post(latest_articles)
-= haml :sidebar
+Template: blog
+
+.page-title
+  %h1 Blog
+.articles= article_summaries(latest_articles)

@@ -1,1 +1,4 @@
 ~ @page.to_html(self)
+
+- unless @page.articles.empty?
+  = article_summaries(@page.articles)

@@ -1,5 +1,7 @@
 module Nesta
 	class App
+
+		Debug = 1
 		helpers do
 			# mostra gli ultimi post
 			def ultimi_post(articles)
