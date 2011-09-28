@@ -25,7 +25,7 @@
         %h1= @heading
         %h2= @subtitle
         - display_menu(@menu_items, :class => "top_nav", :levels => 1)
-      #main{ :role => "main" }
+      #main.span-24{ :role => "main" }
         = yield
-      #footer
-        %p= "Copyright Giustino Borzacchiello"
+      #footer.span-24
+        %p.alt "Copyup Copyright Copydown Copyleft"
