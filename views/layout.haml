@@ -13,12 +13,15 @@
     %meta{ :name => "description", :content => "" }
     %meta{ :name => "author", :content => "" }
     %meta{ :name => "viewport", :content => "width=device-width,initial-scale=1" }
-    %link{ :rel => "stylesheet", :href => "/css/reset.css" }
-    %link{ :rel => "stylesheet", :href => "/css/screen.css" }
+    %link{ :rel => "stylesheet", :href => "/css/blueprint/screen.css", :media => "screen, projection"}
+    %link{ :rel => "stylesheet", :href => "/css/blueprint/print.css", :media => "print" }
+    /[if lt IE 8]
+      %link{ :rel => "stylesheet", :href => "/css/blueprint/ie.css", :media => "screen, projection"}
+    %link{ :rel => "stylesheet", :href => "/css/custom.css", :media => "screen, projection" }
     %script{ :src => "js/libs/modernizr-2.0.6.min.js" }
   %body{ :class => @body_class }
-    #wrapper
-      #header
+    .container
+      #header.span-24
         %h1= @heading
         %h2= @subtitle
         - display_menu(@menu_items, :class => "top_nav", :levels => 1)

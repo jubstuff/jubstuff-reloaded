@@ -1,13 +1,14 @@
 - unless pages.empty?
-  %ol
-    - pages.each do |page|
-      %li.post
+  - pages.each do |page|
+    %article
+      %header.prepend-4.span-20.last
         %h2
           %a{ :href => "#{page.abspath}" }= page.heading
+      = haml(:post_meta, :layout => false, :locals => { :page => page })
+      .content.span-18.append-2.last
         - if page.summary.nil? || page.summary.empty?
           ~ page.body(self)
         - else
           ~ page.summary
           %p.read_more
             %a(href="#{page.abspath}")= page.read_more
-        = haml :post_meta, :layout => false, :locals => { :page => page }

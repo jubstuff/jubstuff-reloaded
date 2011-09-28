@@ -1,9 +1,11 @@
 Date: 15 Settembre 2011
-Summary: Un esercizio sugli alberi binari di ricerca.
+Categories: categories/algorithms, categories/bst
+
+# Esercizio Alberi Binari
 
 Sia dato un albero binario di ricerca `T`, i cui nodi contengano esclusivamente una chiave intera, un puntatore al figlio destro e uno al figlio sinistro.
 
-Si definisca un algoritmo ricorsivo efficiente che, dati i sei valori interi `h1` >= 1, `h2` >= 1, `n1` >= 0, `n2` >= 0, `k1` e `k2`, cancelli dall'albero `T` tutti i nodi che, nell'albero in ingresso, soddisfano le seguente proprietà:
+Si definisca un algoritmo ricorsivo efficiente che, dati i sei valori interi `h1>=1`, `h2>=1`, `n1>=0`, `n2>=0`, `k1` e `k2`, cancelli dall'albero `T` tutti i nodi che, nell'albero in ingresso, soddisfano le seguente proprietà:
 1. ha chiave compresa tra `k1` e `k2`
 2. la sua distanza dalla radice è compresa tra i valori `h1` e `h2`
 3. è radice di un sottoalbero che contiene un numero compreso tra `n1` e `n2` di nodi con chiave compresa tra `k1` e `k2`

@@ -1,0 +1,83 @@
+/* ==top nav */
+.top_nav
+  padding: 0 0 20px 10px
+  border-bottom: 1px solid #333
+
+  li
+    display: inline
+    list-style-type: none
+
+  a
+    float: left
+    line-height: 14px
+    margin: 0 10px 4px 10px
+    text-decoration: none
+  
+  li.current
+    a, a:hover
+      border-bottom: 5px solid #333
+      padding-bottom: 4px
+
+/* =Articles */
+article
+  aside
+    ul
+      list-style: none
+      padding: 0
+
+      time
+        text-transform: uppercase
+/* =About */
+p.intro
+  color: #999
+  font-size: 2em
+  line-height: 1.5em 
+
+  a:link, a:visited
+    color: #999
+    text-decoration: none
+    -webkit-transition: color .3s ease
+    -moz-transition: color .3s ease
+    -o-transition: color .3s ease
+    transition: color .3s ease
+
+  &:hover a
+    color: #369
+
+  a:hover
+    color: #09f
+  span.github
+    background: url(/img/icon/github_32.png) no-repeat 0 50%
+    padding-left: 40px
+
+  span.delicious
+    background: url(/img/icon/delicious_32.png) no-repeat 0 50%
+    padding-left: 40px
+
+  span.meemi
+    background: url(/img/icon/meemi_32.png) no-repeat 0 50%
+    padding-left: 40px
+
+  span.musica
+    background: url(/img/icon/piano_32.png) no-repeat 0 50%
+    padding-left: 40px
+
+  span.tea
+    background: url(/img/icon/teacup_32.gif) no-repeat 0 50%
+    padding-left: 40px
+
+/* =Code Snippets */
+pre
+  background-color: #CFEA84
+  border-bottom: 1px solid #ACDB2D
+  border-top: 1px solid #ACDB2D
+  color: black
+  font-size: 1em
+  overflow: auto
+  padding: 1em
+  white-space: pre
+pre, code, kbd, tt, samp, tt
+  font-family: "andale mono",monospace
+code
+  background-color: #CFEA84
+  padding: 0 2px

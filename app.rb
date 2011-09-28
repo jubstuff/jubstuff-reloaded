@@ -1,11 +1,8 @@
 module Nesta
 	class App
-
-		Debug = 1
 		helpers do
-			# mostra gli ultimi post
-			def ultimi_post(articles)
-				haml(:summaries, :layout => false, :locals => { :pages => articles })
+			def last_post
+			  Nesta::Page.find_articles[0].class
 			end
 		end
 	end
@@ -13,7 +10,7 @@ module Nesta
 	class Page
 		# Testo mostrato di default al sommario dei post
 		def read_more
-			'Read more'
+			metadata('read more') || 'Read more'
 		end
 	end
 end

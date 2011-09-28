@@ -1,6 +1,5 @@
 Date: 07 Settembre 2011
 Categories: categories/books
-Summary: Riflessioni dopo la lettura del libro di Ethan Marcotte, "Responsive Web Design"
 Template: blog
 
 # Responsive Web Design
