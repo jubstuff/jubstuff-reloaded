@@ -4,7 +4,6 @@ Template: blog
 
 # Responsive Web Design
 
-## Flexible typesetting
 Quando si trasforma la line-height come contenuto bisogna considerare la dimensione del testo.
 Ad esempio se si ha un testo di 32px (che diventano 2em) e si vuole una line-height di 48px, 
 bisognerà effettuare la divisione 48px / 32 px = 1.5em
