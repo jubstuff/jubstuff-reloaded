@@ -1,0 +1,54 @@
+Date: 15 Settembre 2011
+Summary: Un esercizio sugli alberi binari di ricerca.
+
+Sia dato un albero binario di ricerca `T`, i cui nodi contengano esclusivamente una chiave intera, un puntatore al figlio destro e uno al figlio sinistro.
+
+Si definisca un algoritmo ricorsivo efficiente che, dati i sei valori interi `h1` >= 1, `h2` >= 1, `n1` >= 0, `n2` >= 0, `k1` e `k2`, cancelli dall'albero `T` tutti i nodi che, nell'albero in ingresso, soddisfano le seguente proprietà:
+1. ha chiave compresa tra `k1` e `k2`
+2. la sua distanza dalla radice è compresa tra i valori `h1` e `h2`
+3. è radice di un sottoalbero che contiene un numero compreso tra `n1` e `n2` di nodi con chiave compresa tra `k1` e `k2`
+
+**Nota:** Non è possibile utilizzare parametri passati per riferimento né variabili globali.
+
+La soluzione più semplice a questo tipo di problema è chiaramente quella *brute force*: 
+effettuare nodo per nodo la ricerca, verificando con più visite dell'albero se sono 
+rispettate le proprietà.
+
+Un approccio migliore, invece, è quello di sfruttare la natura ricorsiva del BST e sfruttare 
+al meglio la ricorsione. Vediamo di cosa abbiamo bisogno.
+
+Per verificare la proprietà 1, basta effettuare un semplice test sulla chiave del nodo corrente.
+
+Per verificare la proprietà 2, dato che non possiamo utilizzare variabili globali, siamo costretti 
+a passare ad ogni chiamata un parametro *distanza*, incrementandolo di 1 man mano che scendiamo 
+nell'albero. A questo punto basterà verificare che *distanza* sia compreso tra `h1` e `h2`.
+
+Questo ci porta alla proprietà 3: possiamo sfruttare l'algoritmo per contare il numero di nodi in un 
+BST, modificandolo leggermente: infatti invece di contare ogni nodo, dobbiamo contare solo quelli che 
+hanno una chiave compresa tra `k1` e `k2` (e questo controllo lo effettuiamo già per la proprietà 1). Una 
+volta fatto il controllo, se positivo basta restituire 1 + il numero di nodi nel sottoalbero destro e 
+sinistro che verificano la proprietà.
+
+Per quanto riguarda la cancellazione, basta semplicemente aggiornare i vari link, in modo da riflettere 
+la situazione con il nodo mancante.
+Questo ci porta al seguente algoritmo:
+              
+	Delete(T, dist, h1, h2, n1, n2, k1, k2)
+	  sx = 0, dx = 0, count_current = 0
+	  if T != NULL
+	    sx = Delete(T.sx, dist+1, h1, h2, n1, n2, k1, k2)
+	    dx = Delete(T.dx, dist+1, h1, h2, n1, n2, k1, k2)
+	    if T.key >= k1 and T.key <= k2
+	      count_current = 1
+	      num_nodi = sx + dx
+	      if num_nodi >= n1 and num_nodi <= n2
+	        if dist >= h1 and dist <= h2 and T.key % 2 == 0
+	          "Cancella nodo corrente"
+	        end
+	      end
+	    end
+	  end
+	  return sx + dx + current
+
+In pratica viene eseguita una vista post-order dell'albero, contando contemporaneamente i nodi che verificano 
+la proprietà 1.
