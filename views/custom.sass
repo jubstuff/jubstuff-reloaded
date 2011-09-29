@@ -30,21 +30,37 @@ body
 /* =Main */
 
 /* =Articles */
-article
-  .content
-    font-size: 105%
-  aside
-    margin-top: 0.3em
-    ul
-      list-style: none
-      padding: 0
+.articles
+  article
+    margin-bottom: 2em
 
-      time
-        font-family: etica-display,"Helvetica Neue",Helvetica,Arial,sans-serif
-        text-transform: uppercase
+    .content
+      font-size: 105%
 
-      .categories
-        letter-spacing: 0.05em
+    aside
+      margin-top: 0.3em
+
+      ul
+        list-style: none
+        padding: 0
+
+        time
+          font-family: etica-display,"Helvetica Neue",Helvetica,Arial,sans-serif
+          text-transform: uppercase
+
+        .categories
+          letter-spacing: 0.05em
+
+.permalink
+  text-align: center
+  border-bottom: 1px solid #CCC
+
+  a
+    color: #974507
+    position: relative
+    text-decoration: none
+    top: .6em
+
 /* =About */
 p.intro
   color: #999

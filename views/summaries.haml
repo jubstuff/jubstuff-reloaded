@@ -1,6 +1,6 @@
 - unless pages.empty?
   - pages.each do |page|
-    %article
+    %article.span-24
       %header.prepend-4.span-20.last
         %h2
           %a{ :href => "#{page.abspath}" }= page.heading
@@ -12,3 +12,5 @@
           ~ page.summary
           %p.read_more
             %a(href="#{page.abspath}")= page.read_more
+      .permalink.span-24
+        %a{ :href => "#{page.abspath}", :title => "Permalink: #{page.heading}" }§
