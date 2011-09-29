@@ -1,0 +1,24 @@
+Date: 29 Settembre 2011
+Categories: categories/vim
+
+# Leggere i valori di un'opzione in Vim
+
+Stavo scrivendo un post stasera, quando ho deciso che era giunto il momento di
+creare un nuovo snippet.
+
+In Vim utilizzo il plugin [Snipmate][1], che a seconda del tipo di file
+recupera l'insieme di snippet corrispondente. Avevo bisogno quindi di recuperare
+il tipo di file corrispondente a quelli con estensione `.mdown`.
+
+Sapevo come impostarla `:set ft=type`, ma non sono riuscito a trovare da nessuna
+parte come leggerla.
+
+Dopo un po' di ricerche, sono finalmente riuscito a svelare l'arcano:
+
+<pre class="prettyprint">
+	# In generale :echo &nome-opzione
+	:echo &ft
+</pre>
+
+
+[1]: http://www.vim.org/scripts/script.php?script_id=2540
