@@ -34,23 +34,25 @@ sinistro che verificano la proprietà.
 Per quanto riguarda la cancellazione, basta semplicemente aggiornare i vari link, in modo da riflettere 
 la situazione con il nodo mancante.
 Questo ci porta al seguente algoritmo:
-              
-	Delete(T, dist, h1, h2, n1, n2, k1, k2)
-	  sx = 0, dx = 0, count_current = 0
-	  if T != NULL
-	    sx = Delete(T.sx, dist+1, h1, h2, n1, n2, k1, k2)
-	    dx = Delete(T.dx, dist+1, h1, h2, n1, n2, k1, k2)
-	    if T.key >= k1 and T.key <= k2
-	      count_current = 1
-	      num_nodi = sx + dx
-	      if num_nodi >= n1 and num_nodi <= n2
-	        if dist >= h1 and dist <= h2 and T.key % 2 == 0
-	          "Cancella nodo corrente"
-	        end
-	      end
-	    end
-	  end
-	  return sx + dx + current
+
+<pre class="prettyprint">              
+Delete(T, dist, h1, h2, n1, n2, k1, k2)
+sx = 0, dx = 0, count_current = 0
+if T != NULL
+	sx = Delete(T.sx, dist+1, h1, h2, n1, n2, k1, k2)
+	dx = Delete(T.dx, dist+1, h1, h2, n1, n2, k1, k2)
+	if T.key >= k1 and T.key <= k2
+	count_current = 1
+	num_nodi = sx + dx
+	if num_nodi >= n1 and num_nodi <= n2
+		if dist >= h1 and dist <= h2 and T.key % 2 == 0
+		"Cancella nodo corrente"
+		end
+	end
+	end
+end
+return sx + dx + current
+</pre>
 
 In pratica viene eseguita una vista post-order dell'albero, contando contemporaneamente i nodi che verificano 
 la proprietà 1.
