@@ -5,3 +5,4 @@
 .sass-cache
 content-demo/*
 public/css/blueprint/src
+themes/slate/*
